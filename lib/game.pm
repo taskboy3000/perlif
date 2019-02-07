@@ -150,7 +150,7 @@ sub getInput {
     }
 
     if ($thisLocation->permits( $action )) {
-        return $thisLocation->$action( $locationItem || lc $words[0] ); # thing or direction 
+        return $thisLocation->$action( $locationItem || lc ($words[0] || "") ); # thing or direction 
     }
 
     # Is this a thing verb?
@@ -190,7 +190,7 @@ sub quit {
     my ($self) = @_;
 
     $self->gameOver(1);
-    return sprintf("Game over.  Your final score was %d\n", $self->dude->myScore);
+    return sprintf("Game over.  Your final score was %d.\n", $self->dude->myScore);
 }
 
 

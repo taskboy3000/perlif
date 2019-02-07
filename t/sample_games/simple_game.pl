@@ -21,7 +21,7 @@ sub init {
   $start->description("This small room has the door you came in to the north, which is not locked.  A small table supports a VASE.\n");
   $start->addItem(item->new(name => "VASE", description => "This vase is old, but cheap.\n"));
 
-  my $parlor = location->new(name=>"parlor", description=> "Among the drear portraits of graceless, unhappy faces is a portrait of a mangy dog.\n");
+  my $parlor = location->new(name=>"parlor", description=> "Among the dreary portraits of graceless, unhappy faces is a portrait of a mangy dog.\n");
   $start->addSouth($parlor);
   $parlor->addItem(item->new(name => "URN", description => "Even the tarnish on this urn looks old.\n", triggersGameOver => 1, gameOverText => "You captured the ghost's urn!\n", points => 10));
 }
