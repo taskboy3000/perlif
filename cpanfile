@@ -1,0 +1,2 @@
+requires 'Moo';
+requires 'JSON';
